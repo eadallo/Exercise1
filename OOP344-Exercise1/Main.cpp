@@ -11,10 +11,10 @@ int main()
    Employee alex(3, "Alex");
    Employee sarah(4, "Sarah");
 
-   dan.setBoss(man);
-   mike.setBoss(man);
-   alex.setBoss(man);
-   sarah.setBoss(man);
+   dan.setBoss(&man);
+   mike.setBoss(&man);
+   alex.setBoss(&man);
+   sarah.setBoss(&man);
 
    dan.work(2);
    mike.work(2);
@@ -57,7 +57,15 @@ int main()
    sarah.report();
    man.report();
    man.report();
-
+   
 
    return 0;
    }
+
+/* 
+- Fixed typo from Private to public
+- Added include to header file
+- Created function getName to Employee class
+- Fixed pointers for setBoss in main.cpp
+- Pretty sure thats all...
+*/
